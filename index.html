@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TieTie 是一款为 macOS 设计的剪贴板管理工具，帮你保存、整理并快速找回复制过的内容。">
+    <meta name="theme-color" content="#f3f3f3">
+    <title>TieTie — 你复制过的，都还在。</title>
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="TieTie 首页">
+          <img src="/assets/logo.svg" alt="TieTie">
+        </a>
+        <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="#features">核心功能</a>
+          <a href="#scenes">使用场景</a>
+          <a href="#faqs">常见问题</a>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-dark header-download" href="#download" aria-label="下载 TieTie">
+            <span>下载 TieTie</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <svg aria-hidden="true" style="position:absolute;width:0;height:0;pointer-events:none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glossy-filter" color-interpolation-filters="sRGB" x="-15%" y="-15%" width="130%" height="130%">
+          <feImage x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" result="map" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gr%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22gb%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22%2F%3E%3Cstop%20offset%3D%2212%25%22%20stop-color%3D%22%230000%22%2F%3E%3Cstop%20offset%3D%2288%25%22%20stop-color%3D%22blue%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%2260%22%20fill%3D%22black%22%2F%3E%3Crect%20width%3D%22800%22%20height%3D%2260%22%20rx%3D%2220%22%20fill%3D%22url(%23gr)%22%2F%3E%3Crect%20width%3D%22800%22%20height%3D%2260%22%20rx%3D%2220%22%20fill%3D%22url(%23gb)%22%20style%3D%22mix-blend-mode%3Adifference%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%22794%22%20height%3D%2254%22%20rx%3D%2220%22%20fill%3D%22hsl(0%200%25%2050%25%20%2F%200.75)%22%20style%3D%22filter%3Ablur(6px)%22%2F%3E%3C%2Fsvg%3E"/>
+          <feDisplacementMap in="SourceGraphic" in2="map" result="dispRed" scale="-60" xChannelSelector="R" yChannelSelector="G"/>
+          <feColorMatrix in="dispRed" result="red" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/>
+          <feDisplacementMap in="SourceGraphic" in2="map" result="dispGreen" scale="-48" xChannelSelector="R" yChannelSelector="G"/>
+          <feColorMatrix in="dispGreen" result="green" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0"/>
+          <feDisplacementMap in="SourceGraphic" in2="map" result="dispBlue" scale="-36" xChannelSelector="R" yChannelSelector="G"/>
+          <feColorMatrix in="dispBlue" result="blue" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+          <feBlend in="red" in2="green" mode="screen" result="rg"/>
+          <feBlend in="rg" in2="blue" mode="screen" result="output"/>
+          <feGaussianBlur in="output" stdDeviation="1.05"/>
+        </filter>
+      </defs>
+    </svg>
+    <main id="top">
+      <section id="download" class="hero">
+        <div class="container hero-grid-motion" aria-hidden="true">
+          <span class="hero-grid-field hero-grid-field-one"></span>
+          <span class="hero-grid-field hero-grid-field-two"></span>
+          <span class="hero-grid-field hero-grid-field-three"></span>
+          <span class="hero-grid-field hero-grid-field-four"></span>
+        </div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <h1>你复制过的，<br>都还在。</h1>
+            <p>文字、链接、图片和文件，TieTie 自动替你收好。<br>想用的时候，几秒找回来。</p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#download"><span class="apple-mark" aria-hidden="true"></span>下载 macOS 版</a>
+              <a class="button button-plain" href="#features">查看核心功能 <span aria-hidden="true">↘</span></a>
+            </div>
+            <ul class="hero-highlights" aria-label="TieTie 产品特点">
+              <li>一次买断</li>
+              <li>离线运行</li>
+              <li>macOS 14+</li>
+            </ul>
+          </div>
+          <div class="hero-product reveal" data-delay="150">
+            <div class="hero-stage" data-hero-stage aria-live="polite"></div>
+            <div class="hero-tabs" data-hero-tabs aria-label="内容类型"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tag-cloud reveal" aria-labelledby="tag-cloud-title">
+        <div class="container">
+          <p id="tag-cloud-title" class="eyebrow centered">复制之后，还能继续做更多</p>
+          <div class="tag-columns" data-tag-columns></div>
+        </div>
+      </section>
+
+      <section id="features" class="feature-section reveal" data-feature-deck="0"></section>
+      <section class="feature-section reveal" data-feature-deck="1"></section>
+
+      <section id="management" class="management section-space">
+        <div class="container">
+          <div class="section-heading reveal">
+            <h2>不只是保存，更好地管理。</h2>
+            <p>从数据安全和窗口外观，到存储管理与使用统计，TieTie 把日常剪贴工作整理得更清楚。</p>
+          </div>
+          <div class="management-cards">
+            <article class="management-card reveal">
+              <div class="card-media"><img src="/assets/showcase/data-manager.png" alt="数据安全与数据管理器示意"></div>
+              <div class="card-copy"><h3>数据安全</h3><p>剪贴记录保存在本机，并提供数据安全检查，帮助及时发现文件副本和本地数据中的异常。</p></div>
+            </article>
+            <article class="management-card reveal" data-delay="80">
+              <div class="card-media"><img src="/assets/showcase/appearance.png" alt="窗口背景调色示意"></div>
+              <div class="card-copy"><h3>窗口背景调色</h3><p>为 TieTie 窗口选择合适的背景颜色，让它更自然地融入不同桌面和工作场景。</p></div>
+            </article>
+            <article class="management-card reveal">
+              <div class="card-media"><img src="/assets/hero-product.png" alt="TieTie 数据管理器示意"></div>
+              <div class="card-copy"><h3>数据管理器</h3><p>查看记录、文件副本和存储占用，并通过筛选快速整理需要保留或清理的本地数据。</p></div>
+            </article>
+            <article class="management-card reveal" data-delay="80">
+              <div class="card-media"><img src="/assets/hero-color.png" alt="TieTie 使用统计示意"></div>
+              <div class="card-copy"><h3>使用统计</h3><p>按天、周和月查看捕获与粘贴次数，更直观地了解自己的使用情况。</p></div>
+            </article>
+          </div>
+          <div class="capability-list reveal" data-capability-list></div>
+        </div>
+      </section>
+
+      <section id="scenes" class="scenes section-space">
+        <div class="container">
+          <div class="section-heading reveal">
+            <h2>复制之后，还能这样用。</h2>
+            <p>看看 TieTie 如何融入写代码、做设计、聊天回复、内容创作和日常填表。</p>
+          </div>
+          <div class="scene-carousel reveal">
+            <div class="scene-track" data-scene-track></div>
+            <div class="scene-navigation">
+              <div class="scene-caption" data-scene-caption></div>
+              <div class="scene-controls">
+                <button type="button" data-scene-prev aria-label="上一个使用场景">←</button>
+                <button type="button" data-scene-next aria-label="下一个使用场景">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="appearance" class="color-showcase section-space">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">窗口背景调色</p><h2>让 TieTie，更像你的桌面。</h2></div>
+            <p>自由调整窗口背景颜色，让 TieTie 自然融入不同壁纸、环境和工作场景。</p>
+          </div>
+          <div class="color-stage reveal" data-color-stage role="group" aria-label="TieTie 窗口背景色预览">
+            <div class="color-layer color-current" data-color-current></div>
+            <div class="color-layer color-reveal" data-color-reveal></div>
+            <div class="color-product"><img src="/assets/hero-product.png" alt="TieTie 窗口预览"></div>
+            <button class="color-brush" type="button" data-color-brush aria-label="切换窗口背景色">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.9 20.87 3 21l.13-.89c.19-1.36.29-2.03.59-2.64.3-.6.78-1.08 1.75-2.05L16.98 3.91c.42-.42.64-.64.87-.75.43-.21.94-.21 1.38 0 .23.11.44.33.86.75.43.42.64.64.75.86.22.44.22.95 0 1.38-.11.23-.32.45-.75.87L8.58 18.53c-.97.97-1.45 1.45-2.06 1.75-.6.3-1.28.4-2.62.59Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m6 15 3 3m-.5-5.5 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="faqs" class="faq section-space">
+        <div class="container faq-grid">
+          <div class="faq-heading reveal"><h2>常见问题</h2></div>
+          <div class="faq-list reveal" data-faq-list></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-cta reveal">
+        <p>让每一次复制，都能在需要时回来。</p>
+        <h3>你复制过的，都还在。</h3>
+        <a class="button button-dark" href="#download">下载 TieTie</a>
+      </div>
+      <div class="container footer-bottom">
+        <a class="brand" href="#top"><img src="/assets/logo.svg" alt="TieTie"></a>
+        <p>为 macOS 打造的剪贴板管理工具</p>
+        <nav aria-label="页脚导航">
+          <a href="#features">核心功能</a>
+          <a href="#scenes">使用场景</a>
+          <a href="#faqs">常见问题</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
