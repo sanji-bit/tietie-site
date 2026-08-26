@@ -1,12 +1,12 @@
 const heroSlides = [
-  { label: "文本", src: "/assets/hero-product.png" },
+  { label: "概览", src: "/assets/hero-slide-overview.png" },
   { label: "图片", src: "/assets/hero-slide-image.png" },
-  { label: "网页", src: "/assets/hero-webpage.png" },
-  { label: "PDF", src: "/assets/features/ocr.png" },
-  { label: "视频", src: "/assets/features/quick-fill.png" },
-  { label: "SVG", src: "/assets/hero-image.png" },
+  { label: "网页", src: "/assets/hero-slide-webpage.png" },
+  { label: "文件", src: "/assets/hero-slide-file.png" },
+  { label: "表情包", src: "/assets/hero-slide-emoji.png" },
   { label: "代码", src: "/assets/hero-slide-code.png" },
   { label: "颜色", src: "/assets/hero-slide-color.png" },
+  { label: "翻译", src: "/assets/hero-slide-translation.png" },
 ];
 
 const featureDecks = [
@@ -20,12 +20,12 @@ const featureDecks = [
     { title: "批量编辑", copy: "一次选择多个内容并统一处理，减少重复操作。", video: "/assets/demos/demo-batch-edit.mp4", poster: "/assets/hero-product.png", duration: 13700 },
   ],
   [
-    { title: "全文快速搜索", copy: "输入记得住的任意关键词，从文字、链接和文件内容中快速找到需要的结果。", video: "/assets/demos/demo-search.mp4", poster: "/assets/features/search.png", duration: 7100 },
-    { title: "提取文本", copy: "从图片中提取文字，让截图里的内容也可以搜索和使用。", video: "/assets/demos/demo-extract-text.mp4", poster: "/assets/features/ocr.png", duration: 5100 },
-    { title: "空格快速预览", copy: "按下空格即可快速查看当前内容，不必打开完整详情。", video: "/assets/demos/demo-quick-preview.mp4", poster: "/assets/features/quick-fill.png", duration: 12700 },
-    { title: "翻译", copy: "在不离开当前工作流的情况下翻译复制的内容，并直接使用处理后的结果。", video: "/assets/demos/demo-translate.mp4", poster: "/assets/features/translate.png", duration: 9600 },
-    { title: "识别二维码", copy: "识别二维码并取出其中的链接或文字内容。", video: "/assets/demos/demo-qrcode.mp4", poster: "/assets/features/qrcode.png", duration: 13100 },
-    { title: "置顶", copy: "把重要内容置顶，让它始终在更容易找到的位置。", video: "/assets/demos/demo-pin.mp4", poster: "/assets/features/tags-groups.png", duration: 5500 },
+    { title: "全文快速搜索", copy: "输入记得住的任意关键词，从文字、链接和文件内容中快速找到需要的结果。", video: "/assets/demos/demo-search.mp4", poster: "/assets/hero-product.png", duration: 7100 },
+    { title: "提取文本", copy: "从图片中提取文字，让截图里的内容也可以搜索和使用。", video: "/assets/demos/demo-extract-text.mp4", poster: "/assets/hero-image.png", duration: 5100 },
+    { title: "空格快速预览", copy: "按下空格即可快速查看当前内容，不必打开完整详情。", video: "/assets/demos/demo-quick-preview.mp4", poster: "/assets/hero-product.png", duration: 12700 },
+    { title: "翻译", copy: "在不离开当前工作流的情况下翻译复制的内容，并直接使用处理后的结果。", video: "/assets/demos/demo-translate.mp4", poster: "/assets/hero-webpage.png", duration: 9600 },
+    { title: "识别二维码", copy: "识别二维码并取出其中的链接或文字内容。", video: "/assets/demos/demo-qrcode.mp4", poster: "/assets/hero-image.png", duration: 13100 },
+    { title: "置顶", copy: "把重要内容置顶，让它始终在更容易找到的位置。", video: "/assets/demos/demo-pin.mp4", poster: "/assets/hero-product.png", duration: 5500 },
     { title: "拖拽排序", copy: "拖动内容调整顺序，让常用内容保持在顺手的位置。", video: "/assets/demos/demo-drag-sort.mp4", poster: "/assets/showcase/data-manager.png", duration: 8100 },
   ],
 ];
@@ -54,13 +54,8 @@ const scenes = [
   { title: "Vibe Coding", copy: "在编辑器、终端和 AI 对话之间，快速找回代码、命令、日志与 API 示例。", src: "/assets/hero-webpage.png" },
   { title: "整理设计素材", copy: "集中保存颜色值、截图、SVG、图片与设计参考，需要时直接搜索使用。", src: "/assets/hero-image.png" },
   { title: "快速回复消息", copy: "找回常用回复、链接和之前发送过的信息，减少重复输入和来回查找。", src: "/assets/hero-product.png" },
-  { title: "写作与 Prompt", copy: "整理文案片段、参考资料和提示词，在不同工具之间继续创作。", src: "/assets/features/search.png" },
-  { title: "填写常用信息", copy: "快速调用邮箱、地址和常用链接，让重复填写更轻松。", src: "/assets/features/quick-fill.png" },
-];
-
-const colors = [
-  ["暖橙色", "#ffb38a"], ["柔粉色", "#f3c9d8"], ["天空蓝", "#bfd8ff"],
-  ["薰衣草紫", "#d8c8f3"], ["薄荷绿", "#cbe7d8"], ["深石墨", "#343944"],
+  { title: "写作与 Prompt", copy: "整理文案片段、参考资料和提示词，在不同工具之间继续创作。", src: "/assets/hero-webpage.png" },
+  { title: "填写常用信息", copy: "快速调用邮箱、地址和常用链接，让重复填写更轻松。", src: "/assets/hero-product.png" },
 ];
 
 const faqs = [
@@ -312,47 +307,6 @@ function initializeScenes() {
   render();
 }
 
-function initializeColors() {
-  const stage = document.querySelector("[data-color-stage]");
-  const current = document.querySelector("[data-color-current]");
-  const reveal = document.querySelector("[data-color-reveal]");
-  const button = document.querySelector("[data-color-brush]");
-  if (!stage || !current || !reveal || !button) return;
-  let active = 0;
-  function updateLabel() {
-    const next = (active + 1) % colors.length;
-    stage.setAttribute("aria-label", `TieTie 窗口背景色预览，当前为${colors[active][0]}`);
-    button.setAttribute("aria-label", `切换窗口背景色，下一种为${colors[next][0]}`);
-    button.style.setProperty("--next-color", colors[next][1]);
-  }
-  button.addEventListener("click", () => {
-    if (button.disabled) return;
-    const next = (active + 1) % colors.length;
-    if (reduceMotion.matches || typeof reveal.animate !== "function") {
-      active = next;
-      current.style.background = colors[active][1];
-      updateLabel();
-      return;
-    }
-    button.disabled = true;
-    reveal.style.background = colors[next][1];
-    reveal.style.visibility = "visible";
-    const animation = reveal.animate([
-      { clipPath: "polygon(100% 100%,100% 100%,100% 100%)" },
-      { clipPath: "polygon(-200% 100%,100% -200%,100% 100%)" },
-    ], { duration: 720, easing: "cubic-bezier(.65,0,.2,1)", fill: "forwards" });
-    animation.addEventListener("finish", () => {
-      active = next;
-      current.style.background = colors[active][1];
-      reveal.style.visibility = "hidden";
-      animation.cancel();
-      button.disabled = false;
-      updateLabel();
-    }, { once: true });
-  });
-  updateLabel();
-}
-
 function initializeFaqs() {
   const list = document.querySelector("[data-faq-list]");
   if (!list) return;
@@ -453,7 +407,6 @@ document.querySelectorAll("[data-feature-deck]").forEach((section) => {
 });
 initializeCapabilities();
 initializeScenes();
-initializeColors();
 initializeFaqs();
 initializeReveal();
 startLiveReload();

@@ -161,7 +161,7 @@ main > section:first-of-type { margin-top: 0; }
   50% { -webkit-mask-position: 106% 112%; mask-position: 106% 112%; opacity: 1; }
 }
 .hero-copy { position: relative; z-index: 2; }
-.hero-copy { width: 40.5%; }
+.hero-copy { top: -65px; width: 40.5%; }
 .hero-copy h1 { margin-bottom: clamp(.8rem, .42vw + .67rem, 1.2rem); font-size: clamp(3.2rem, 2.29vw + 2.47rem, 5.4rem); font-weight: 500; line-height: 1.05; letter-spacing: -.03em; }
 .hero-copy p { margin-bottom: 0; color: var(--black-58); font-size: clamp(1.4rem, .21vw + 1.33rem, 1.6rem); line-height: 1.4; }
 .hero-actions { display: flex; align-items: center; gap: 16px; margin-top: clamp(2.4rem, .83vw + 2.13rem, 3.2rem); }
@@ -259,17 +259,6 @@ main > section:first-of-type { margin-top: 0; }
 .scene-controls { display: flex; gap: 8px; }
 .scene-controls button { display: flex; width: 32px; height: 32px; align-items: center; justify-content: center; border: 0; border-radius: 2px; background: #e1e1e1; }
 
-.color-stage { position: relative; aspect-ratio: 16 / 8.6; overflow: hidden; border-radius: var(--radius); isolation: isolate; }
-.color-layer { position: absolute; inset: 0; }
-.color-current { background: #ffb38a; }
-.color-reveal { z-index: 1; visibility: hidden; clip-path: polygon(100% 100%,100% 100%,100% 100%); }
-.color-product { position: absolute; z-index: 2; top: 9%; left: 10%; width: 80%; filter: drop-shadow(0 28px 45px rgba(5,5,5,.2)); }
-.color-product img { width: 100%; border-radius: 10px; }
-.color-brush { position: absolute; right: 28px; bottom: 28px; z-index: 3; display: flex; width: 50px; height: 50px; padding: 0; align-items: center; justify-content: center; border: 1px solid var(--black-14); border-radius: 50%; background: rgba(255,255,255,.92); box-shadow: 0 3px 24px rgba(5,5,5,.16); backdrop-filter: blur(12px); }
-.color-brush:hover { background: #fff; transform: translateY(-1px); }
-.color-brush svg { width: 24px; height: 24px; }
-.color-brush::after { content: ""; position: absolute; right: 1px; bottom: 1px; width: 11px; height: 11px; border: 2px solid #fff; border-radius: 50%; background: var(--next-color, #f3c9d8); }
-
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(56px, 8vw, 144px); align-items: start; }
 .faq-heading { position: sticky; top: 120px; }
 .faq-item { border-bottom: 1px solid var(--black-14); }
@@ -307,7 +296,7 @@ main > section:first-of-type { margin-top: 0; }
   .header-download { width: 44px; height: 44px; min-height: 44px; padding: 0; border-radius: 8px; }
   .header-download span { display: none; }
   .hero-grid { flex-direction: column; }
-  .hero-copy { width: 100%; text-align: center; }
+  .hero-copy { top: 0; width: 100%; text-align: center; }
   .hero-actions { justify-content: center; margin-bottom: 20px; }
   .hero-highlights { justify-content: center; }
   .hero-product { width: 100%; }
@@ -328,15 +317,17 @@ main > section:first-of-type { margin-top: 0; }
   .container { padding: 0 20px; }
   main { padding-top: 90px; }
   .hero { min-height: auto; }
+  .hero-copy h1 br { display: none; }
   .hero-copy p br { display: none; }
-  .hero-actions { align-items: flex-start; flex-direction: column; gap: 10px; }
-  .hero-highlights { justify-content: flex-start; }
-  .hero-stage { width: 100%; aspect-ratio: 16 / 9; }
+  .hero-actions { align-items: center; flex-direction: column; gap: 10px; }
+  .hero-highlights { justify-content: center; }
+  .hero-stage { width: 100%; aspect-ratio: 4 / 3; }
   .hero-stage::after { display: none; }
   .hero-tabs { width: 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
   .tag-cloud .eyebrow { text-align: center; }
   .tag-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .tag-column { height: 55px; }
+  .tag-column:nth-child(n + 4) { border-top: 1px solid #e2e2e2; }
   .section-heading { align-items: flex-start; flex-direction: column; }
   .section-heading > p { text-align: left; }
   .management-cards { grid-template-columns: 1fr; }
@@ -352,9 +343,6 @@ main > section:first-of-type { margin-top: 0; }
   .scene-caption { display: none; }
   .scene-controls { flex: 0 0 auto; }
   .scene-controls button { width: 52px; }
-  .color-stage { aspect-ratio: 1 / 1; }
-  .color-product { top: 18%; left: 3%; width: 94%; }
-  .color-brush { right: 14px; bottom: 14px; }
   .faq-grid { grid-template-columns: 1fr; gap: 42px; }
   .faq-heading { position: static; }
   .faq-item:first-child .faq-question { padding-top: 0; }
