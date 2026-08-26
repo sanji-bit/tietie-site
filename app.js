@@ -1,12 +1,12 @@
 const heroSlides = [
   { label: "文本", src: "/assets/hero-product.png" },
-  { label: "图片", src: "/assets/hero-image.png" },
+  { label: "图片", src: "/assets/hero-slide-image.png" },
   { label: "网页", src: "/assets/hero-webpage.png" },
   { label: "PDF", src: "/assets/features/ocr.png" },
   { label: "视频", src: "/assets/features/quick-fill.png" },
   { label: "SVG", src: "/assets/hero-image.png" },
-  { label: "代码", src: "/assets/features/translate.png" },
-  { label: "颜色", src: "/assets/hero-color.png" },
+  { label: "代码", src: "/assets/hero-slide-code.png" },
+  { label: "颜色", src: "/assets/hero-slide-color.png" },
 ];
 
 const featureDecks = [
@@ -20,7 +20,7 @@ const featureDecks = [
     { title: "批量编辑", copy: "一次选择多个内容并统一处理，减少重复操作。", video: "/assets/demos/demo-batch-edit.mp4", poster: "/assets/hero-product.png", duration: 13700 },
   ],
   [
-    { title: "全文快速搜索", copy: "输入记得住的任意关键词，从文字、链接和文件内容中快速找到需要的结果。", src: "/assets/features/search.png" },
+    { title: "全文快速搜索", copy: "输入记得住的任意关键词，从文字、链接和文件内容中快速找到需要的结果。", video: "/assets/demos/demo-search.mp4", poster: "/assets/features/search.png", duration: 7100 },
     { title: "提取文本", copy: "从图片中提取文字，让截图里的内容也可以搜索和使用。", video: "/assets/demos/demo-extract-text.mp4", poster: "/assets/features/ocr.png", duration: 5100 },
     { title: "空格快速预览", copy: "按下空格即可快速查看当前内容，不必打开完整详情。", video: "/assets/demos/demo-quick-preview.mp4", poster: "/assets/features/quick-fill.png", duration: 12700 },
     { title: "翻译", copy: "在不离开当前工作流的情况下翻译复制的内容，并直接使用处理后的结果。", video: "/assets/demos/demo-translate.mp4", poster: "/assets/features/translate.png", duration: 9600 },
