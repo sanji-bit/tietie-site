@@ -1,7 +1,7 @@
 {
   "app.js": {
-    "bytes": 19800,
-    "sha256": "87f03daa6b799eda943db514971b7e8b9f7b4508ff8292c23fe0c2dafc9987f0"
+    "bytes": 20382,
+    "sha256": "a68a77bb2c94ab4b6800909786c2ae0bc61f80fd9c67cffaa60277d85bce1701"
   },
   "assets/.DS_Store": {
     "bytes": 6148,
@@ -118,6 +118,62 @@
   "assets/logo.svg": {
     "bytes": 4614,
     "sha256": "6a5ab06ea679f1f4a721e22938451a958b8889b8e9bfc43d00e67dfb91673b1c"
+  },
+  "assets/posters/demo-app-groups.jpg": {
+    "bytes": 140131,
+    "sha256": "41e5f3a9a55c32d363138829187a6dd01fa9c328712c61d7ed1b282eef695d9f"
+  },
+  "assets/posters/demo-batch-edit.jpg": {
+    "bytes": 80379,
+    "sha256": "19155c63f9635eb467d3c6bc0a2d307808ea8234ffabed33f7b703d4f0db865c"
+  },
+  "assets/posters/demo-browse-modes.jpg": {
+    "bytes": 339280,
+    "sha256": "290919f44322e0f928979e4ec23340b9459d2d412408716e3601901bae6c16ba"
+  },
+  "assets/posters/demo-drag-sort.jpg": {
+    "bytes": 89401,
+    "sha256": "5235fdeb3c20f4f0513644d01daa1347345711bcaf48b503a8406d2b0bc16299"
+  },
+  "assets/posters/demo-extract-text.jpg": {
+    "bytes": 153592,
+    "sha256": "0a0df6e859e22bc311866f868142d08f20c27f920497f9cca69578105dca9b8d"
+  },
+  "assets/posters/demo-pin.jpg": {
+    "bytes": 79600,
+    "sha256": "653639230ccc8e62eee80b30cefff1a3c57c1f68e44d5e9de52f7add30b20109"
+  },
+  "assets/posters/demo-qrcode.jpg": {
+    "bytes": 184930,
+    "sha256": "c51b2e36520e0ef3eff9f139fe7b8879f928ae058fdd957ede12e8c4e77fc3f9"
+  },
+  "assets/posters/demo-quick-preview.jpg": {
+    "bytes": 65257,
+    "sha256": "49ce4c57c60ab2bab8b9b615697d742de9397357e780c153169f6b98c7dd3ab9"
+  },
+  "assets/posters/demo-rename.jpg": {
+    "bytes": 259476,
+    "sha256": "f19044060e984e98fcd3fe48ab3f200b12515d23b52381e8864aa811b308d4c7"
+  },
+  "assets/posters/demo-search.jpg": {
+    "bytes": 343235,
+    "sha256": "8a3a01a5c1a08dd35f484356a0dec194810d6e7c92c601da3312c1e2faf18d74"
+  },
+  "assets/posters/demo-tags.jpg": {
+    "bytes": 320244,
+    "sha256": "4d4ae6a8c09296ccc284c7021fabe3ebb73f03385e5f2409ae9df1e60fec3f5f"
+  },
+  "assets/posters/demo-translate.jpg": {
+    "bytes": 227966,
+    "sha256": "87be76db063000a136d15674de08e2e5fa92898afbbd72da5f28704a52bad303"
+  },
+  "assets/posters/feature-content-types.jpg": {
+    "bytes": 252897,
+    "sha256": "9cd2d23c084fdf580a3703601a1a9b74d8f1f17da96db3e90ce47b7af2acf7b0"
+  },
+  "assets/posters/feature-start-anywhere.jpg": {
+    "bytes": 60154,
+    "sha256": "405fb4d7d241b333d504a2a1f5a6823becea8ebfc7c4e4c6ea42ec749268ae8f"
   },
   "assets/showcase/appearance.png": {
     "bytes": 74967,

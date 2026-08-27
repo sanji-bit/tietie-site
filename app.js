@@ -11,22 +11,22 @@ const heroSlides = [
 
 const featureDecks = [
   [
-    { title: "从任何地方开始", copy: "无论正在使用浏览器、编辑器还是聊天工具，都可以随时调出 TieTie，继续使用刚刚复制的内容。", video: "/assets/feature-start-anywhere.mp4", poster: "/assets/hero-product.png", duration: 7000 },
-    { title: "多种内容，各有合适展示", copy: "代码、网页、颜色、图片、文本和文件，会根据内容类型以更清楚的形式呈现。", video: "/assets/feature-content-types.mp4", poster: "/assets/hero-image.png", duration: 15700 },
-    { title: "分组", copy: "把内容整理到清晰的分组中，需要时更容易找到。", video: "/assets/demos/demo-app-groups.mp4", poster: "/assets/hero-product.png", duration: 12700 },
-    { title: "标签", copy: "给内容添加标签，用更明确的方式整理和筛选。", video: "/assets/demos/demo-tags.mp4", poster: "/assets/hero-product.png", duration: 13400 },
-    { title: "重命名", copy: "把难以辨认的文件名和内容标题改成更清楚、更容易再次找到的名称。", video: "/assets/demos/demo-rename.mp4", poster: "/assets/hero-product.png", duration: 9900 },
-    { title: "列表、网格、瀑布流", copy: "在列表、网格和瀑布流之间切换，按自己的习惯浏览内容。", video: "/assets/demos/demo-browse-modes.mp4", poster: "/assets/hero-product.png", duration: 19200 },
-    { title: "批量编辑", copy: "一次选择多个内容并统一处理，减少重复操作。", video: "/assets/demos/demo-batch-edit.mp4", poster: "/assets/hero-product.png", duration: 13700 },
+    { title: "从任何地方开始", copy: "无论正在使用浏览器、编辑器还是聊天工具，都可以随时调出 TieTie，继续使用刚刚复制的内容。", video: "/assets/feature-start-anywhere.mp4", poster: "/assets/posters/feature-start-anywhere.jpg", duration: 7000 },
+    { title: "多种内容，各有合适展示", copy: "代码、网页、颜色、图片、文本和文件，会根据内容类型以更清楚的形式呈现。", video: "/assets/feature-content-types.mp4", poster: "/assets/posters/feature-content-types.jpg", duration: 15700 },
+    { title: "分组", copy: "把内容整理到清晰的分组中，需要时更容易找到。", video: "/assets/demos/demo-app-groups.mp4", poster: "/assets/posters/demo-app-groups.jpg", duration: 12700 },
+    { title: "标签", copy: "给内容添加标签，用更明确的方式整理和筛选。", video: "/assets/demos/demo-tags.mp4", poster: "/assets/posters/demo-tags.jpg", duration: 13400 },
+    { title: "重命名", copy: "把难以辨认的文件名和内容标题改成更清楚、更容易再次找到的名称。", video: "/assets/demos/demo-rename.mp4", poster: "/assets/posters/demo-rename.jpg", duration: 9900 },
+    { title: "列表、网格、瀑布流", copy: "在列表、网格和瀑布流之间切换，按自己的习惯浏览内容。", video: "/assets/demos/demo-browse-modes.mp4", poster: "/assets/posters/demo-browse-modes.jpg", duration: 19200 },
+    { title: "批量编辑", copy: "一次选择多个内容并统一处理，减少重复操作。", video: "/assets/demos/demo-batch-edit.mp4", poster: "/assets/posters/demo-batch-edit.jpg", duration: 13700 },
   ],
   [
-    { title: "全文快速搜索", copy: "输入记得住的任意关键词，从文字、链接和文件内容中快速找到需要的结果。", video: "/assets/demos/demo-search.mp4", poster: "/assets/hero-product.png", duration: 7100 },
-    { title: "提取文本", copy: "从图片中提取文字，让截图里的内容也可以搜索和使用。", video: "/assets/demos/demo-extract-text.mp4", poster: "/assets/hero-image.png", duration: 5100 },
-    { title: "空格快速预览", copy: "按下空格即可快速查看当前内容，不必打开完整详情。", video: "/assets/demos/demo-quick-preview.mp4", poster: "/assets/hero-product.png", duration: 12700 },
-    { title: "翻译", copy: "在不离开当前工作流的情况下翻译复制的内容，并直接使用处理后的结果。", video: "/assets/demos/demo-translate.mp4", poster: "/assets/hero-webpage.png", duration: 9600 },
-    { title: "识别二维码", copy: "识别二维码并取出其中的链接或文字内容。", video: "/assets/demos/demo-qrcode.mp4", poster: "/assets/hero-image.png", duration: 13100 },
-    { title: "置顶", copy: "把重要内容置顶，让它始终在更容易找到的位置。", video: "/assets/demos/demo-pin.mp4", poster: "/assets/hero-product.png", duration: 5500 },
-    { title: "拖拽排序", copy: "拖动内容调整顺序，让常用内容保持在顺手的位置。", video: "/assets/demos/demo-drag-sort.mp4", poster: "/assets/showcase/data-manager.png", duration: 8100 },
+    { title: "全文快速搜索", copy: "输入记得住的任意关键词，从文字、链接和文件内容中快速找到需要的结果。", video: "/assets/demos/demo-search.mp4", poster: "/assets/posters/demo-search.jpg", duration: 7100 },
+    { title: "提取文本", copy: "从图片中提取文字，让截图里的内容也可以搜索和使用。", video: "/assets/demos/demo-extract-text.mp4", poster: "/assets/posters/demo-extract-text.jpg", duration: 5100 },
+    { title: "空格快速预览", copy: "按下空格即可快速查看当前内容，不必打开完整详情。", video: "/assets/demos/demo-quick-preview.mp4", poster: "/assets/posters/demo-quick-preview.jpg", duration: 12700 },
+    { title: "翻译", copy: "在不离开当前工作流的情况下翻译复制的内容，并直接使用处理后的结果。", video: "/assets/demos/demo-translate.mp4", poster: "/assets/posters/demo-translate.jpg", duration: 9600 },
+    { title: "识别二维码", copy: "识别二维码并取出其中的链接或文字内容。", video: "/assets/demos/demo-qrcode.mp4", poster: "/assets/posters/demo-qrcode.jpg", duration: 13100 },
+    { title: "置顶", copy: "把重要内容置顶，让它始终在更容易找到的位置。", video: "/assets/demos/demo-pin.mp4", poster: "/assets/posters/demo-pin.jpg", duration: 5500 },
+    { title: "拖拽排序", copy: "拖动内容调整顺序，让常用内容保持在顺手的位置。", video: "/assets/demos/demo-drag-sort.mp4", poster: "/assets/posters/demo-drag-sort.jpg", duration: 8100 },
   ],
 ];
 
@@ -89,7 +89,7 @@ function createVisual(item, active = false) {
     video.defaultMuted = true;
     video.loop = true;
     video.playsInline = true;
-    video.preload = "metadata";
+    video.preload = active ? "auto" : "none";
     video.poster = item.poster || "";
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
@@ -227,7 +227,19 @@ function initializeFeatureDeck(section, items, reversed) {
   let active = 0;
   let timer;
   let progressAnimation;
+  function prepareVideos() {
+    const next = (active + 1) % visuals.length;
+    visuals.forEach((visual, index) => {
+      const video = visual.querySelector("video");
+      if (!video) return;
+      const preload = index === active || index === next ? "auto" : "none";
+      if (video.preload === preload) return;
+      video.preload = preload;
+      if (preload === "auto") video.load();
+    });
+  }
   function playActiveVideo() {
+    prepareVideos();
     visuals.forEach((visual, index) => {
       const video = visual.querySelector("video");
       if (!video) return;
