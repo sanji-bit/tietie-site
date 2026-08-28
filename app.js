@@ -385,6 +385,7 @@ function initializeHeaderGlass() {
   let scheduled = false;
   function update() {
     header.classList.toggle("is-scrolled", window.scrollY > 24);
+    header.classList.toggle("is-footer", window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 1);
     scheduled = false;
   }
   function onScroll() {
@@ -394,6 +395,99 @@ function initializeHeaderGlass() {
   }
   update();
   window.addEventListener("scroll", onScroll, { passive: true });
+}
+
+function initializeFooterLogoMarquee() {
+  const viewport = document.querySelector("[data-footer-logo-marquee]");
+  const track = document.querySelector("[data-footer-logo-track]");
+  const firstTile = track?.firstElementChild;
+  if (!viewport || !track || !firstTile || reduceMotion.matches) return;
+  let tileSize = 0;
+  let target = window.scrollY * 0.6;
+  let current = target;
+  let frame = 0;
+  let previousTime = 0;
+  let lastScrollY = window.scrollY;
+  function measureViewport() {
+    document.documentElement.style.setProperty("--page-width", `${document.documentElement.clientWidth}px`);
+  }
+  function measure() {
+    measureViewport();
+    const styles = window.getComputedStyle(track);
+    tileSize = firstTile.getBoundingClientRect().width + parseFloat(styles.columnGap || styles.gap || "0");
+  }
+  function render(time = performance.now()) {
+    const elapsed = previousTime ? Math.min(64, time - previousTime) : 16;
+    previousTime = time;
+    const distance = target - current;
+    if (Math.abs(distance) < 0.25) {
+      current = target;
+      frame = 0;
+      previousTime = 0;
+      if (tileSize > 0) {
+        const loopOffset = ((current % tileSize) + tileSize) % tileSize;
+        track.style.transform = `translate3d(${-loopOffset}px, 0, 0)`;
+      }
+      return;
+    }
+    current += distance * (1 - Math.pow(0.5, elapsed / 120));
+    if (tileSize > 0) {
+      const loopOffset = ((current % tileSize) + tileSize) % tileSize;
+      track.style.transform = `translate3d(${-loopOffset}px, 0, 0)`;
+    }
+    frame = window.requestAnimationFrame(render);
+  }
+  function requestRender() {
+    if (!frame) frame = window.requestAnimationFrame(render);
+  }
+  function onScroll() {
+    const nextScrollY = window.scrollY;
+    target += (nextScrollY - lastScrollY) * 0.6;
+    lastScrollY = nextScrollY;
+    requestRender();
+  }
+  function atPageEnd() {
+    return window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 1;
+  }
+  function onWheel(event) {
+    if (event.deltaY <= 0 || !atPageEnd()) return;
+    event.preventDefault();
+    target += event.deltaY * 0.6;
+    requestRender();
+  }
+  let touchY = 0;
+  function onTouchStart(event) {
+    touchY = event.touches[0]?.clientY ?? 0;
+  }
+  function onTouchMove(event) {
+    if (!atPageEnd()) return;
+    const nextTouchY = event.touches[0]?.clientY ?? touchY;
+    const delta = touchY - nextTouchY;
+    touchY = nextTouchY;
+    if (delta <= 0) return;
+    event.preventDefault();
+    target += delta * 0.6;
+    requestRender();
+  }
+  measure();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("wheel", onWheel, { passive: false });
+  window.addEventListener("touchstart", onTouchStart, { passive: true });
+  window.addEventListener("touchmove", onTouchMove, { passive: false });
+  window.addEventListener("resize", () => { measure(); requestRender(); }, { passive: true });
+  if ("ResizeObserver" in window) new ResizeObserver(() => { measure(); requestRender(); }).observe(viewport);
+  render();
+}
+
+function initializeFooterHeight() {
+  const footer = document.querySelector(".site-footer");
+  if (!footer) return;
+  const sync = () => {
+    document.documentElement.style.setProperty("--footer-height", `${Math.ceil(footer.scrollHeight)}px`);
+  };
+  sync();
+  window.addEventListener("resize", sync, { passive: true });
+  if ("ResizeObserver" in window) new ResizeObserver(sync).observe(footer);
 }
 
 function startLiveReload() {
@@ -421,4 +515,6 @@ initializeCapabilities();
 initializeScenes();
 initializeFaqs();
 initializeReveal();
+initializeFooterHeight();
+initializeFooterLogoMarquee();
 startLiveReload();
