@@ -6,22 +6,21 @@
     <meta name="description" content="TieTie 是一款为 macOS 设计的剪贴板管理工具，帮你保存、整理并快速找回复制过的内容。">
     <meta name="theme-color" content="#f3f3f3">
     <title>TieTie — 你复制过的，都还在。</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/app.js" defer></script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
   </head>
   <body>
     <header id="header" class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="TieTie 首页">
-          <img src="/assets/logo.svg" alt="TieTie">
+          <img src="assets/logo.svg" alt="TieTie">
         </a>
         <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false">
           <span></span><span></span>
         </button>
         <nav class="main-nav" aria-label="主导航">
           <a href="#features">核心功能</a>
-          <a href="#scenes">使用场景</a>
           <a href="#faqs">常见问题</a>
         </nav>
         <div class="header-actions">
@@ -89,53 +88,6 @@
       <section id="features" class="feature-section reveal" data-feature-deck="0"></section>
       <section class="feature-section reveal" data-feature-deck="1"></section>
 
-      <section id="management" class="management section-space">
-        <div class="container">
-          <div class="section-heading reveal">
-            <h2>不只是保存，更好地管理。</h2>
-            <p>从数据安全和窗口外观，到存储管理与使用统计，TieTie 把日常剪贴工作整理得更清楚。</p>
-          </div>
-          <div class="management-cards">
-            <article class="management-card reveal">
-              <div class="card-media"><img src="/assets/showcase/data-manager.png" alt="数据安全与数据管理器示意"></div>
-              <div class="card-copy"><h3>数据安全</h3><p>剪贴记录保存在本机，并提供数据安全检查，帮助及时发现文件副本和本地数据中的异常。</p></div>
-            </article>
-            <article class="management-card reveal" data-delay="80">
-              <div class="card-media"><img src="/assets/showcase/appearance.png" alt="窗口背景调色示意"></div>
-              <div class="card-copy"><h3>窗口背景调色</h3><p>为 TieTie 窗口选择合适的背景颜色，让它更自然地融入不同桌面和工作场景。</p></div>
-            </article>
-            <article class="management-card reveal">
-              <div class="card-media"><img src="/assets/hero-product.png" alt="TieTie 数据管理器示意"></div>
-              <div class="card-copy"><h3>数据管理器</h3><p>查看记录、文件副本和存储占用，并通过筛选快速整理需要保留或清理的本地数据。</p></div>
-            </article>
-            <article class="management-card reveal" data-delay="80">
-              <div class="card-media"><img src="/assets/hero-color.png" alt="TieTie 使用统计示意"></div>
-              <div class="card-copy"><h3>使用统计</h3><p>按天、周和月查看捕获与粘贴次数，更直观地了解自己的使用情况。</p></div>
-            </article>
-          </div>
-          <div class="capability-list reveal" data-capability-list></div>
-        </div>
-      </section>
-
-      <section id="scenes" class="scenes section-space">
-        <div class="container">
-          <div class="section-heading reveal">
-            <h2>复制之后，还能这样用。</h2>
-            <p>看看 TieTie 如何融入写代码、做设计、聊天回复、内容创作和日常填表。</p>
-          </div>
-          <div class="scene-carousel reveal">
-            <div class="scene-track" data-scene-track></div>
-            <div class="scene-navigation">
-              <div class="scene-caption" data-scene-caption></div>
-              <div class="scene-controls">
-                <button type="button" data-scene-prev aria-label="上一个使用场景">←</button>
-                <button type="button" data-scene-next aria-label="下一个使用场景">→</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="faqs" class="faq section-space">
         <div class="container faq-grid">
           <div class="faq-heading reveal"><h2>常见问题</h2></div>
@@ -146,7 +98,7 @@
         <div class="footer-story-panel" data-footer-story-panel>
           <div class="footer-story-media" aria-hidden="true">
             <video class="footer-story-video" autoplay loop muted playsinline preload="auto">
-              <source src="/assets/footer-ballet.mp4" type="video/mp4">
+              <source src="assets/footer-ballet.mp4" type="video/mp4">
             </video>
             <div class="footer-story-backdrop"></div>
           </div>
@@ -163,9 +115,11 @@
       <div class="footer-shell">
         <div class="footer-bottom">
           <a class="brand footer-brand" href="/" aria-label="TieTie 首页">
-            <img src="/assets/logo.svg" alt="TieTie">
+            <img src="assets/logo.svg" alt="TieTie">
           </a>
           <nav aria-label="页脚导航">
+            <a href="#features">核心功能</a>
+            <a href="#faqs">常见问题</a>
             <a href="/privacy.html">隐私政策</a>
             <a href="/support.html">支持</a>
           </nav>

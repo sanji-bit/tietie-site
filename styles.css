@@ -227,40 +227,6 @@ main > section:first-of-type { margin-top: 0; }
 .section-heading > *:first-child { flex: 1; }
 .section-heading h2, .faq-heading h2 { margin-bottom: 0; font-size: clamp(2.8rem, 2.08vw + 2.13rem, 4.8rem); font-weight: 400; line-height: 1.05; letter-spacing: -.03em; }
 .section-heading > p { width: 100%; max-width: 466px; margin: 0; color: var(--black-58); font-size: clamp(1.4rem, .21vw + 1.33rem, 1.6rem); line-height: 1.4; text-align: right; }
-.management-cards { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #b3b3b3; border-bottom: 1px solid #b3b3b3; }
-.management-card { display: flex; min-width: 0; flex-direction: column; padding: clamp(2.8rem, 3.33vw + 1.73rem, 6rem) 0; }
-.management-card:nth-child(odd) { padding-right: clamp(2.8rem, 3.85vw + 1.57rem, 6.5rem); }
-.management-card:nth-child(even) { padding-left: clamp(2.8rem, 3.85vw + 1.57rem, 6.5rem); border-left: 1px solid #b3b3b3; }
-.management-card:nth-child(n + 3) { border-top: 1px solid #b3b3b3; }
-.card-media { order: 2; overflow: hidden; }
-.card-media img { width: 100%; height: auto; border: 1px solid var(--black-14); border-radius: var(--radius); transition: transform .3s ease-out; }
-.card-media img:hover { transform: scale(1.1); }
-.card-copy { order: 1; display: flex; flex-direction: column; gap: 4px; margin-bottom: clamp(2.4rem, 2.5vw + 1.6rem, 4.8rem); }
-.card-copy h3 { margin-bottom: 0; font-size: clamp(1.4rem, .63vw + 1.2rem, 2rem); font-weight: 400; line-height: 1.2; letter-spacing: -.02em; }
-.card-copy p { max-width: 360px; margin: 0; color: var(--black-58); }
-.capability-list { display: flex; flex-wrap: wrap; gap: clamp(2.4rem, 2.5vw + 1.6rem, 4.8rem); margin-top: clamp(3rem, 2.92vw + 2.07rem, 5.8rem); }
-.capability-item { display: flex; width: calc((100% - 3 * clamp(2.4rem, 2.5vw + 1.6rem, 4.8rem)) / 4); min-width: 0; flex: none; flex-direction: column; gap: 8px; padding: 0; }
-.capability-icon { display: flex; width: 20px; height: 20px; align-items: center; justify-content: center; color: var(--black); }
-.capability-icon svg { width: 20px; height: 20px; }
-.capability-item h3 { margin: 0; font-size: clamp(1.4rem, .63vw + 1.2rem, 2rem); font-weight: 400; line-height: 1.2; letter-spacing: -.02em; }
-.capability-item p { margin: 0; color: var(--black-58); font-size: clamp(1.2rem, 0vw + 1.2rem, 1.2rem); line-height: 1.4; }
-
-.scenes { overflow: hidden; }
-.scenes .section-heading { display: block; max-width: 828px; margin: 0 0 clamp(0rem, 3.33vw - 1.07rem, 3.2rem); text-align: left; }
-.scenes .section-heading > p { max-width: 600px; margin: 0; text-align: left; }
-.scene-carousel { overflow: visible; }
-.scene-track { display: flex; gap: 24px; transition: transform 0.55s cubic-bezier(.215,.61,.355,1); }
-.scene-slide { flex: 0 0 clamp(28rem, 57.08vw + 9.73rem, 82.8rem); }
-.scene-slide-media { aspect-ratio: 16 / 9; padding: 32px 3px; overflow: visible; border-radius: var(--radius); }
-.scene-slide.is-active .scene-slide-media img { box-shadow: 0 3px 32px rgba(5,5,5,.2); }
-.scene-slide-media img { width: 100%; height: 100%; border: 0; object-fit: cover; }
-.scene-navigation { display: flex; width: 100%; max-width: 828px; align-items: flex-start; justify-content: space-between; gap: 32px; }
-.scene-caption { display: flex; max-width: 700px; flex-direction: column; gap: 4px; }
-.scene-caption h3 { margin-bottom: 8px; font-size: clamp(1.4rem, .63vw + 1.2rem, 2rem); font-weight: 400; line-height: 1.2; }
-.scene-caption p { margin: 0; color: var(--black-58); }
-.scene-controls { display: flex; gap: 8px; }
-.scene-controls button { display: flex; width: 32px; height: 32px; align-items: center; justify-content: center; border: 0; border-radius: 2px; background: #e1e1e1; }
-
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(56px, 8vw, 144px); align-items: start; }
 .faq-heading { position: sticky; top: 120px; }
 .faq-item { border-bottom: 1px solid var(--black-14); }
@@ -276,7 +242,7 @@ main > section:first-of-type { margin-top: 0; }
 .footer-spacer { height: var(--footer-height, 534px); pointer-events: none; }
 .site-footer { position: fixed; inset: auto 0 0; z-index: 0; height: auto; padding: 0 30px; overflow: visible; background: var(--surface); }
 .footer-shell { display: flex; width: 100%; max-width: 1200px; margin: 0 auto; flex-direction: column; gap: 64px; padding-top: 64px; padding-bottom: 64px; }
-.footer-story { position: relative; padding: clamp(5.6rem, 8vw, 9.6rem) 30px 0; background: var(--surface); }
+.footer-story { position: relative; padding: clamp(5.6rem, 8vw, 9.6rem) 30px clamp(6.4rem, 9vw, 10.8rem); background: var(--surface); }
 main > .footer-story { margin-bottom: 0; }
 .footer-story-panel {
   position: relative;
@@ -393,19 +359,6 @@ main > .footer-story { margin-bottom: 0; }
   .tag-column:nth-child(n + 4) { border-top: 1px solid #e2e2e2; }
   .section-heading { align-items: flex-start; flex-direction: column; }
   .section-heading > p { text-align: left; }
-  .management-cards { grid-template-columns: 1fr; }
-  .management-card { flex-direction: column; gap: 24px; padding: clamp(2.8rem, 3.33vw + 1.73rem, 6rem) 0; }
-  .management-card:nth-child(odd), .management-card:nth-child(even) { padding-right: 0; padding-left: 0; border-left: 0; }
-  .management-card:nth-child(n + 2) { border-top: 1px solid #b3b3b3; }
-  .card-media { order: 1; }
-  .card-copy { order: 2; margin-bottom: 0; }
-  .capability-list { flex-wrap: wrap; }
-  .capability-item { width: calc(50% - 16px); flex: none; }
-  .scene-slide { flex-basis: 100%; }
-  .scene-navigation { justify-content: center; gap: 20px; }
-  .scene-caption { display: none; }
-  .scene-controls { flex: 0 0 auto; }
-  .scene-controls button { width: 52px; }
   .faq-grid { grid-template-columns: 1fr; gap: 42px; }
   .faq-heading { position: static; }
   .faq-item:first-child .faq-question { padding-top: 0; }
@@ -415,7 +368,7 @@ main > .footer-story { margin-bottom: 0; }
   .footer-shell { height: auto; gap: 64px; padding-top: 64px; padding-bottom: 64px; }
   .footer-bottom { height: auto; grid-template-columns: 1fr; gap: 10px; text-align: center; }
   .footer-bottom .brand, .footer-bottom nav { justify-content: center; }
-  .footer-story { min-height: auto; padding: 5.6rem 20px 0; }
+  .footer-story { min-height: auto; padding: 5.6rem 20px 4.8rem; }
   .footer-story-panel { position: relative; top: auto; width: 100%; height: 360px; min-height: 360px; }
   .footer-story-copy { width: 100%; padding: 28px 20px; }
   .footer-story-copy h2 { font-size: clamp(3.2rem, 9vw, 4.8rem); }
